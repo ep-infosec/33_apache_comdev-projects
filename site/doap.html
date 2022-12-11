@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang=''>
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="styles.css">
+   <!-- these are needed for the menu bar -->
+   <script src="js/jquery.js" type="text/javascript"></script>
+   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+   <script src="script.js"></script>
+   <title>DOAP project files</title>
+</head>
+<body>
+
+<!-- Page Title -->
+
+<div id="logo"><h1><div style="padding-top: 30px;">DOAP project files</div></h1></div>
+
+<div id='cssmenu'>
+<ul>
+   <li><a href='.'><span>Home</span></a></li>
+   <li><a href='committees.html'><span>Committees</span></a></li>
+   <li><a href='projects.html'><span>Projects</span></a></li>
+   <li><a href='releases.html'><span>Releases</span></a></li>
+   <li class='last'><a href='timelines.html'><span>Timelines</span></a></li>
+   <li style="background: none !important"><input type="text" style="margin-top: 20px;" onkeypress="checkKeyPress(event, this);" placeholder="Search..."/></li>
+   <li style="float: right;" class='active'><a href='about.html'><span>About</span></a></li>
+   <!--li style="background: none; float: right;"><a href="edit/"><img title="Edit project data" style="vertical-align: middle; margin-top: -5px; height: 24px; width: 24px;" src="images/edit.png"/></a></li-->
+</ul>
+</div>
+
+<!-- CONTENT -->
+
+<h2>DOAP Files</h2>
+<div>
+<p>During October 2005 a wide ranging discussion was held on the site-dev mailing list aimed at arriving at an archictecture and tools that would allow us to create a project directory web site. A key part of the plans, and one of the biggest stumbling blocks, was the selection of a suitable format of information file that would be the key part.</p>
+<p>The result of the discussion was a consensus to use <a href="https://github.com/edumbill/doap/wiki">DOAP</a> - "Description Of A Project" which is an RDF based format. The decision was taken for the following reasons:</p>
+<ul>
+<li>use of an existing format was felt to be important</li>
+<li>it is becoming more commonly used and therefore has a growing base of support</li>
+<li>being designed to be extensible it can be easily adjusted to our needs</li>
+</ul>
+<p>This site is generated from DOAP files that each project maintains individually. If a project hasn't provided a link to their DOAP file, it won't appear on this site. If the project you're interested in isn't here, go tell them to create a DOAP file and get themselves listed!</p>
+<p>This section of the website contains advice and guidelines for projects when creating or maintaining their DOAP files. While much of the information contained is general to all DOAP files, some is specific to the files maintained by ASF projects.</p>
+<ul>
+<li>DOAP <a href="guidelines.html">Guidelines</a></li>
+<li><a href="create.html">Create</a> an ASF DOAP</li>
+<li>DOAP <a href="doapfaq.html">FAQ</a></li>
+</ul>
+</div>
+
+<!-- Footer -->
+
+<div id="footer">
+   Managed by the <a href="http://community.apache.org">Apache Community Development Project</a>.<br/>
+   Copyright&copy; 2019, the Apache Software Foundation. Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a><br/>
+   Apache&reg; and the Apache feather logo are trademarks of The Apache Software Foundation.
+</div>
+</body>
+</html>

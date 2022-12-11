@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<rdf:RDF xml:lang="en"
+         xmlns="http://usefulinc.com/ns/doap#" 
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+         xmlns:asfext="http://projects.apache.org/ns/asfext#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  <asfext:pmc rdf:about="tinkerpop">
+    <asfext:name>Apache TinkerPop</asfext:name>
+    <asfext:charter>
+      The mission of TinkerPop is the creation and maintenance of software related to
+      A graph computing framework for both graph databases (OLTP) and graph analytic systems (OLAP)
+    </asfext:charter>
+    <foaf:homepage rdf:resource="http://tinkerpop.apache.org/"/>
+  </asfext:pmc>
+
+</rdf:RDF>

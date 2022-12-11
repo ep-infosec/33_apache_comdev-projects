@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang=''>
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="styles.css">
+   <!-- these are needed for the menu bar -->
+   <script src="js/jquery.js" type="text/javascript"></script>
+   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+   <script src="script.js"></script>
+   <title>DOAP FAQ</title>
+</head>
+<body>
+
+<!-- Page Title -->
+
+<div id="logo"><h1><div style="padding-top: 30px;">DOAP FAQ</div></h1></div>
+
+<div id='cssmenu'>
+<ul>
+   <li><a href='.'><span>Home</span></a></li>
+   <li><a href='committees.html'><span>Committees</span></a></li>
+   <li><a href='projects.html'><span>Projects</span></a></li>
+   <li><a href='releases.html'><span>Releases</span></a></li>
+   <li class='last'><a href='timelines.html'><span>Timelines</span></a></li>
+   <li style="background: none !important"><input type="text" style="margin-top: 20px;" onkeypress="checkKeyPress(event, this);" placeholder="Search..."/></li>
+   <li style="float: right;" class='active'><a href='about.html'><span>About</span></a></li>
+   <!--li style="background: none; float: right;"><a href="edit/"><img title="Edit project data" style="vertical-align: middle; margin-top: -5px; height: 24px; width: 24px;" src="images/edit.png"/></a></li-->
+</ul>
+</div>
+
+<!-- CONTENT -->
+
+<h2>ASF DOAP File FAQ</h2>
+<div class="section-content">
+<ul>
+<li><a href="#idp32026544">I want to list my project is more than one category but the form to create the DOAP file only lets me select one. Can I add the others? How?</a></li>
+<li><a href="#idp32028464">Where should the DOAP file be stored?</a></li>
+<li><a href="#idp32032048">Where should the mailing list URL point?</a></li>
+<li><a href="#idp32033456">Where should the repository link point to?</a></li>
+<li><a href="#idp32034352">I need to add more than 'XXX'. How do I do that?</a></li>
+<li><a href="#idp32035632">What does the release information mean?</a></li>
+<li><a href="#idp32037424">How do we get an RSS feed?</a></li>
+<li><a href="#idp32038192">What happens if we commit an error to the DOAP file?</a></li>
+<li><a href="#idp32039216">What date should I use in the 'created' field of a version?</a></li>
+</ul>
+<table>
+<tr>
+<td width="10%" class="bigq" valign="top">Q<a id="idp32026544"></a>
+</td>
+<td width="90%" class="q" valign="top">I want to list my project is more than one category but the form to create the DOAP file only lets me select one. Can I add the others? How?</td>
+</tr>
+<tr>
+<td width="10%" class="biga" valign="top">A</td>
+<td width="90%" class="a" valign="top">The form is intended as a simple way to create a DOAP file for a project, it's not intended to be used beyond the initial creation so is limited in its functionality.
+You can list as many categories or programming languages as you need for a project, provided you include only those listed on the relevant pages.<br>
+To add other categories or programming languages simply duplicate the existing entries with the new details.</td>
+</tr>
+<tr>
+<td width="10%" class="bigq" valign="top">Q<a id="idp32028464"></a>
+</td>
+<td width="90%" class="q" valign="top">Where should the DOAP file be stored?</td>
+</tr>
+<tr>
+<td width="10%" class="biga" valign="top">A</td>
+<td width="90%" class="a" valign="top">The simple answer is that there are no hard and fast rules about where the file should be stored. It should be in a location that can be accessed via an http or https request, but beyond that there are no restrictions.<br>Some projects have included the file under the root of their website and provided that URL. They feel this gives them more control over when the file is updated.<br>Other projects have simply committed the file to their repository and provided a URL to the repository as this way they don't have the concern of publishing the file.<br>Either is fine and which is right for your project is something you can decide. Remember you can always change the link!</td>
+</tr>
+<tr>
+<td width="10%" class="bigq" valign="top">Q<a id="idp32032048"></a>
+</td>
+<td width="90%" class="q" valign="top">Where should the mailing list URL point?</td>
+</tr>
+<tr>
+<td width="10%" class="biga" valign="top">A</td>
+<td width="90%" class="a" valign="top">It should point to a single web page that allows people to find out more information about the mailing lists provided by your project.</td>
+</tr>
+<tr>
+<td width="10%" class="bigq" valign="top">Q<a id="idp32033456"></a>
+</td>
+<td width="90%" class="q" valign="top">Where should the repository link point to?</td>
+</tr>
+<tr>
+<td width="10%" class="biga" valign="top">A</td>
+<td width="90%" class="a" valign="top">The repository URL should point at your projects most up to date code, normally known as 'trunk' within the ASF.</td>
+</tr>
+<tr>
+<td width="10%" class="bigq" valign="top">Q<a id="idp32034352"></a>
+</td>
+<td width="90%" class="q" valign="top">I need to add more than 'XXX'. How do I do that?</td>
+</tr>
+<tr>
+<td width="10%" class="biga" valign="top">A</td>
+<td width="90%" class="a" valign="top">You'll need to edit the generated DOAP file. Remember the file that is generated is only intended as a starting point for you to adjust. Simply copy the copy section and edit as required.
+Please ensure you copy the full section, not a subset. For example, each "Version" must be in its own "release" section,
+and each "SVNRepository" and "GitRepository" entry must be in its own "repository" section.
+The following are .</td>
+</tr>
+<tr>
+<td width="10%" class="bigq" valign="top">Q<a id="idp32035632"></a>
+</td>
+<td width="90%" class="q" valign="top">What does the release information mean?</td>
+</tr>
+<tr>
+<td width="10%" class="biga" valign="top">A</td>
+<td width="90%" class="a" valign="top">The release information allows you to add
+<ul>
+<li>the date of the release</li>
+<li>a descriptive name for the release</li>
+<li>a version number</li>
+</ul>The information is used in various places and combined in various ways, so if you're not sure what to put in the various entries have a look at the generated web pages and RSS feeds to see how your entries will be formatted.</td>
+</tr>
+<tr>
+<td width="10%" class="bigq" valign="top">Q<a id="idp32037424"></a>
+</td>
+<td width="90%" class="q" valign="top">How do we get an RSS feed?</td>
+</tr>
+<tr>
+<td width="10%" class="biga" valign="top">A</td>
+<td width="90%" class="a" valign="top">The RSS feeds are generated automatically. You don't need to do anything else.</td>
+</tr>
+<tr>
+<td width="10%" class="bigq" valign="top">Q<a id="idp32038192"></a>
+</td>
+<td width="90%" class="q" valign="top">What happens if we commit an error to the DOAP file?</td>
+</tr>
+<tr>
+<td width="10%" class="biga" valign="top">A</td>
+<td width="90%" class="a" valign="top">If the DOAP file can't be processed, for whatever reason, the project will simply not be included on the site.<br>Once we have greater use of the maintainer information we hope to send an email informing them that there was a problem, but presently that doesn't happen.</td>
+</tr>
+<tr>
+<td width="10%" class="bigq" valign="top">Q<a id="idp32039216"></a>
+</td>
+<td width="90%" class="q" valign="top">What date should I use in the 'created' field of a version?</td>
+</tr>
+<tr>
+<td width="10%" class="biga" valign="top">A</td>
+<td width="90%" class="a" valign="top">The date you use should be the date the version was released. This may or may not be the same as the date the tarball was created if this is done prior to the date of the release.</td>
+</tr>
+</table>
+</div>
+
+<!-- Footer -->
+
+<div id="footer">
+   Managed by the <a href="http://community.apache.org">Apache Community Development Project</a>.<br/>
+   Copyright&copy; 2019, the Apache Software Foundation. Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a><br/>
+   Apache&reg; and the Apache feather logo are trademarks of The Apache Software Foundation.
+</div>
+</body>
+</html>
